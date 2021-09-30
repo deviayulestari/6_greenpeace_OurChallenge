@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Team</title>
+  <style>
+    body{
+      margin: 50px auto ;
+    }
+    .wrapper {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      height: 100vh;
+      justify-content: center;
+    }
+
+    .card {
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3);
+      transition: 0.3s;
+      border-radius: 5px;
+      width: 30%;
+      padding: 30px;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      height: 50vh;
+      justify-content: center;
+      border: 1px solid;
+    }
+
+    .mySlides {
+      padding: 2px 16px;
+      text-align: center;
+    }
+
+    .mySlides img{
+      border-radius: 50px;
+      height: 50px;
+      width: 50px;
+    }
+  </style>
+</head>
+<body>
+ <div class="wrapper">
+    <div class="heading">
+      <h1>Our Team</h1>
+    </div>
+
+    <div class="card">
+      <div class="mySlides">
+        <img src="../assets/avatar.png" alt="Avatar1">
+        <h4><b>Arvel</b></h4>
+        <p>Ketua</p>
+        <p>“Make it work, make it right.”</p>
+      </div>
+
+      <div class="mySlides">
+        <img src="../assets/avatar.png" alt="Avatar2">
+        <h4><b>Devi</b></h4>
+        <p>Anggota</p>
+        <p>“Simplicity is the soul of efficiency.”</p>
+      </div>
+
+      <div class="mySlides">
+        <img src="../assets/avatar.png" alt="Avatar3">
+        <h4><b>Diki</b></h4>
+        <p>Anggota</p>
+        <p>“Fix the cause, not the symptom.”</p>
+      </div>
+      
+      <div class="mySlides">
+        <img src="../assets/avatar.png" alt="Avatar4" >
+        <h4><b>Fadilla</b></h4>
+        <p>Anggota</p>
+        <p>“Knowledge is power.”</p>
+      </div>
+
+    <div class="button">
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    </div>
+  </div>
+
+<script>
+  var slideIndex = 1;
+  showSlides(slideIndex);
+
+  // Next/previous controls
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slides[slideIndex-1].style.display = "block";
+  }
+</script>
+</body>
+</html>
